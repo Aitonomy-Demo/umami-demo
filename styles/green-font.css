@@ -1,0 +1,34 @@
+/*
+ * green-font.css
+ *
+ * SCRUM-8: make font green
+ *
+ * This stylesheet applies a green font color across the application.
+ * It is provided as an additive, opt-in stylesheet so it can be imported
+ * or linked without modifying existing styles.
+ *
+ * Usage:
+ *   - Link in HTML:   <link rel="stylesheet" href="/styles/green-font.css">
+ *   - Or import in JS: import '../styles/green-font.css';
+ *   - Or scope it:     add class "green-font" to a container element.
+ */
+
+:root {
+  /* Central token so the shade can be tuned in one place. */
+  --green-font-color: #2e7d32;
+}
+
+/* Global application of the green font color. */
+body {
+  color: var(--green-font-color);
+}
+
+/*
+ * Scoped variant: apply the class "green-font" to any element to make
+ * that element and its descendants use the green font color without
+ * affecting the rest of the page.
+ */
+.green-font,
+.green-font * {
+  color: var(--green-font-color);
+}
