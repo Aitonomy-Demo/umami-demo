@@ -1,0 +1,7 @@
+:root {
+  /* SCRUM-6: Make the base font slightly smaller.
+   * Umami's default root font-size is 16px. Reducing it to 15px
+   * scales all rem-based typography down proportionally without
+   * touching individual component styles. */
+  font-size: 15px;
+}
