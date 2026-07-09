@@ -1,0 +1,32 @@
+/*
+ * SCRUM-4: Make the font slightly larger.
+ *
+ * This stylesheet provides an additive, opt-in override that bumps the
+ * base font size up a small notch. Because rem/em units cascade from the
+ * root element, adjusting the root font size scales typography across the
+ * app consistently without touching individual component styles.
+ *
+ * Usage: import this file after the app's global styles so the override
+ * takes effect, e.g. in the root layout/entry:
+ *
+ *   import '../styles/font-size-override.css';
+ */
+
+:root {
+  /*
+   * Default browser/base is typically 16px. A "slightly larger" bump to
+   * 17px (~6% increase) improves readability without dramatically
+   * reshaping the layout.
+   */
+  font-size: 17px;
+}
+
+/*
+ * Respect users who prefer a more compact interface at very small
+ * viewports by keeping the increase modest there.
+ */
+@media (max-width: 480px) {
+  :root {
+    font-size: 16.5px;
+  }
+}
