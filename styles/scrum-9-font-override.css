@@ -1,0 +1,36 @@
+/*
+ * SCRUM-9: Make the font larger again and red.
+ *
+ * This stylesheet provides a scoped, additive override that increases the
+ * base font size and applies a red text color. Apply it by adding the
+ * `scrum-9-font` class to a container element, e.g.:
+ *
+ *   <body class="scrum-9-font"> ... </body>
+ *
+ * Because this file is purely additive it does not modify any existing
+ * styles unless the opt-in class is present.
+ */
+
+.scrum-9-font {
+  /* Larger base font size */
+  font-size: 1.25rem;
+  /* Red text color */
+  color: #e00000;
+}
+
+/* Ensure common text elements inherit the larger, red styling when the
+ * container opts in. */
+.scrum-9-font h1,
+.scrum-9-font h2,
+.scrum-9-font h3,
+.scrum-9-font h4,
+.scrum-9-font h5,
+.scrum-9-font h6,
+.scrum-9-font p,
+.scrum-9-font span,
+.scrum-9-font a,
+.scrum-9-font li,
+.scrum-9-font label,
+.scrum-9-font button {
+  color: inherit;
+}
